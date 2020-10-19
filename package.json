@@ -1,6 +1,6 @@
 {
-  "name": "a-queue",
-  "version": "1.0.0",
+  "name": "pico-queue",
+  "version": "1.0.1",
   "description": "One liner minimal (only 159 bytes) asynchronous function queue for node.js, browser and TypeScript",
   "author": {
     "name": "Yuhsak Inoue",
@@ -10,7 +10,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Yuhsak/a-queue.git"
+    "url": "https://github.com/Yuhsak/pico-queue.git"
   },
   "main": "index.js",
   "module": "index.esm.js",

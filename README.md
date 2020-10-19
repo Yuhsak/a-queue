@@ -1,11 +1,11 @@
-# a-queue
+# pico-queue
 
 One liner minimal (only 159 bytes) asynchronous function queue for node.js, browser and TypeScript
 
 ## Install
 
 ```sh
-npm install a-queue
+npm install pico-queue
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ npm install a-queue
 The callback function passed into `queue.push()` will always be executed sequencially, which means that the next callback function will wait until completion of former callback if any promise is returned.
 
 ```ts
-import {createAsyncQueue} from 'a-queue'
+import {createAsyncQueue} from 'pico-queue'
 
 const wait = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
 
@@ -47,7 +47,7 @@ queue.push(() => {
 The returned Promise will be resolved right after the completion of the Promise which is returned from callback function.
 
 ```ts
-import {createAsyncQueue} from 'a-queue'
+import {createAsyncQueue} from 'pico-queue'
 
 const wait = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
 
@@ -75,7 +75,7 @@ If callback function returns a value, it will be the resolved value of the Promi
 Optionally, `createAsyncQueue()` accepts the value to pass to the very first callback function as its argument.
 
 ```ts
-import {createAsyncQueue} from 'a-queue'
+import {createAsyncQueue} from 'pico-queue'
 
 const wait = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
 
@@ -114,7 +114,7 @@ This means that **any `UnhandledPromiseRejection` will never be thrown even if t
 To handle rejections on-the-fly, simply add `.catch` block for the Promise from `queue.push()` or use `try await ~ catch` clause.
 
 ```ts
-import {createAsyncQueue} from 'a-queue'
+import {createAsyncQueue} from 'pico-queue'
 
 const queue = createAsyncQueue()
 
@@ -147,7 +147,7 @@ start()
 For safely typed chaining, type of the argument and return value can be specified optionally.
 
 ```ts
-import {createAsyncQueue} from 'a-queue'
+import {createAsyncQueue} from 'pico-queue'
 
 // queue.push() accepts any type of function
 const queue = createAsyncQueue()
