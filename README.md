@@ -1,6 +1,14 @@
 # pico-queue
 
-One liner minimal (only 159 bytes) asynchronous function queue for node.js, browser and TypeScript
+One liner dead minimal (only **156 bytes**) asynchronous function queue for node.js, browser written in TypeScript
+
+## Feature
+
+- **Simple**: push sync or async functions, then they'll be executed sequencially.
+- **Fast**: it's basically one simple object which contains a two length array and a push function.
+- **Tiny**: only 156 bytes of gzipped.
+
+compatible to ES6
 
 ## Install
 

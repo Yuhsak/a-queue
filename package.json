@@ -1,7 +1,7 @@
 {
   "name": "pico-queue",
-  "version": "1.0.2",
-  "description": "One liner minimal (only 159 bytes) asynchronous function queue for node.js, browser and TypeScript",
+  "version": "1.0.3",
+  "description": "One liner dead minimal (only **156 bytes**) asynchronous function queue for node.js and browser written in TypeScript.",
   "author": {
     "name": "Yuhsak Inoue",
     "email": "yuhsak.inoue@gmail.com",
