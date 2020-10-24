@@ -1,6 +1,6 @@
-# pico-queue
+# pico-queue [![Build Status](https://travis-ci.org/Yuhsak/pico-queue.svg?branch=main)](https://travis-ci.org/Yuhsak/pico-queue) [![Coverage Status](https://coveralls.io/repos/github/Yuhsak/pico-queue/badge.svg?branch=main)](https://coveralls.io/github/Yuhsak/pico-queue?branch=main)
 
-One liner dead minimal (only **156 bytes**) asynchronous function queue for node.js, browser written in TypeScript
+One liner dead minimal (only **156 bytes**) asynchronous function queue for node.js and browser written in TypeScript.
 
 ## Feature
 

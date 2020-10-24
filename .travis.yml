@@ -1,0 +1,16 @@
+os: linux
+dist: focal
+language: node_js
+node_js:
+  - 12
+script: npm run test:ci
+deploy:
+  provider: npm
+  email: yuhsak.inoue@gmail.com
+  api_token:
+    secure: CAzfCraD8/gNvXWUg5zsbuiy9L85/TcoIfbsI9QMRhtJaZIa+wkKDG7BXTnG/BhPSv1BMhd/KFn45jaP0uyp7vqKvkDwnTafpMQaVbtwiPEaiKtPMebavg+PvlUhkBYtLpu0Tj4kcAyr/9nq5YCfRQu3ns1oAfMxJAU1cDb2KXNhxyrOI2EjUMbnlWvY+1vJIxe8xT1uZ2FXVUrKkzQbTgVbRRs65vqnlr3bL4ZqcCWp72I9xbNXjEeOkLd9oHmzhSaCpadtlu6uZK50VEXfCpPVZ36bhWHYBpbly8WxEB36QNp6L+4UMVKWyk/MtSQ3udPB0wYdbY/g8ySRC08HbE2TqJZjSxZnGjpZSafehBHT4hz09NfUNUgh+nCcKKPUlWJJ6IPQrdkNGJZPPxQUPdF/3Q/vvySI+48FB4ndxJnlH6HuIH53FaJKBs7o/3YSnkokuazo7J3nRfbXKoUX6dvyWbYtWAsCbH/cJzoRLB72dTsNuRHCV+H8b4r4cTgt0iTw1g1/0eql6mHG9NxS7dve1TVI/tIhtioxx3YpUlQK56BVqA82Uw/2vGOhAbc2ujKbIEdOWG2109yMjG1uDWv3sbFMUsCcyD+ZowIoRLOTtFDk6CrGl2naAIDbO1ZYpPpOmDGIBnfuAUrmWTRtUalPqI+1FWcLjqzrPW5xRO0=
+  on:
+    tags: true
+    repo: Yuhsak/pico-queue
+    branch: main
+  skip_cleanup: true
