@@ -20,37 +20,13 @@ describe('createAsyncQueue', () => {
 
     test('resolve funcs sequencially', async () => {
       const queue = createAsyncQueue()
-      const arr = []
+      const arr: number[] = []
       queue.push(() => wait(300).then(() => arr.push(0)))
       queue.push(() => arr.push(1))
       queue.push(() => wait(100).then(() => arr.push(2)))
       queue.push(async () => arr.push(3))
       await queue.push(() => Promise.resolve())
       expect(arr.join('')).toBe('0123')
-    })
-
-    test('catch error', async () => {
-
-      const queue = createAsyncQueue()
-      const arr = []
-      const state: {reject?: (value?: unknown) => void} = {}
-      const e = () => new Promise((resolve, reject) => {
-        state.reject = reject
-      })
-      queue.push(e).catch(e => {
-        arr.push(0)
-      })
-      queue.push(() => Promise.reject()).catch(e => {
-        arr.push(1)
-      })
-      queue.push(() => {
-        arr.push(2)
-      })
-      setTimeout(() => {
-        state.reject?.()
-      }, 100)
-      await queue.push(() => Promise.resolve())
-      expect(arr.join('')).toBe('012')
     })
 
   })
