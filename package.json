@@ -27,11 +27,12 @@
     "test:ci": "npm run test && coveralls < coverage/lcov.info"
   },
   "devDependencies": {
-    "@types/jest": "^26.0.14",
-    "coveralls": "^3.1.0",
-    "jest": "26.5.2",
+    "@swc/core": "^1.2.210",
+    "@swc/jest": "^0.2.21",
+    "@types/jest": "^28.1.4",
+    "coveralls": "^3.1.1",
+    "jest": "^28.1.2",
     "rimraf": "^3.0.2",
-    "ts-jest": "^26.4.1",
-    "typescript": "^4.0.3"
+    "typescript": "^4.7.4"
   }
 }
